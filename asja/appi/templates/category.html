@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<header class="position-relative">
+  <img src="{% static 'image/fjongo.jpg' %}" class="w-100" style="max-height: 700px; object-fit: cover;" alt="...">
+  {% include 'navbar.html' %}
+</header>
+
+
+<div class="container">
+    <!-- Informacionet e kategorise categoryBook tek context-->
+<h1>{{categoryBook.category_title}}</h1>
+            <div class="row">
+                <!-- Librat qe i perkasin kategorise booksincategory tek context-->
+          {% for book in booksincategory %}
+          <div class="col-12 col-md-6 col-lg-4 mb-5"> 
+            <div class="card h-100"> <!--h-100 per ti bere te gjtitha imazhet njesoj-->
+              <img src="{% if book.book_image %}{{ book.book_image.url }}{% else %}{% static 'path/to/default/image.jpg' %}{% endif %}" class="card-img-top" alt="Book Image">
+
+              <div class="card-body">
+                <h5 class="card-title">{{book.book_title}}</h5>
+                <p class="card-text">{{book.book_price}} ALL</p>
+                <p class="card-text">{{book.book_description}}</p>
+                <a href="{% url 'detailpage' book.pk %}" class="btn btn-primary">Click for more</a>
+              </div>
+            </div>
+          </div>
+ {% endfor %}
+</div>
+</div>
+{% endblock %}

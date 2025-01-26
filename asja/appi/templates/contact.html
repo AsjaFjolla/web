@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/book.css">
+    
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+<link href="https://fontawesome.com/icons/cart-shopping?fclassic&ssolid" rel="stylesheet">
+<body>
+  <header class="position-relative">
+        
+    <!--fund navbar-->
+    
+    
+      
+      
+        
+      
+        <!-- Logo and Navigation -->
+        <div class="logo-nav">
+          <img src="" alt="" class="logo" />
+          <div class="nav-icons">
+            </div>
+        </div>
+      </header>
+      
+      <main class="contact-form">
+        <!-- Page Title -->
+        
+        
+      
+
+  </div>
+    <nav class="navbar navbar-expand-lg position-absolute top-0 w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""><img src="image/lg.jpg" alt=""><br>
+            <span class="ps-2"> Fjolla's Shelf</span></a>
+
+            
+          
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'registerpage' %}">Register</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'contactpage'%}">Contact</a>
+              </li>
+            
+              <li class="nav-item dropdown">
+                <a class=" nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+                  Category
+                 </a>
+                <ul class="dropdown-menu">
+                  
+                
+                  <li><a class="dropdown-item" href="#">Books and Journals</a></li>
+                        
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Romance</a></li>
+                          <li><a class="dropdown-item" href="#">Classic</a></li>
+                          <li><a class="dropdown-item" href="#">Comics</a></li>
+                          <li><a class="dropdown-item" href="#">Adventure</a></li>
+                          <li><a class="dropdown-item" href="#">Philosophy</a></li>
+                          <li><a class="dropdown-item" href="#">Novel</a></li>
+                          <li><a class="dropdown-item" href="#">Mystery</a></li>
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Thriller</a></li>
+
+                          <li><a class="dropdown-item" href="#">Journals</a></li>
+
+                          <li><a class="dropdown-item" href="#">Pink journals</a></li>
+                          <li><a class="dropdown-item" href="#">Blue journals</a></li>
+                          <li><a class="dropdown-item" href="#">Black Journals</a></li>
+                          <li><a class="dropdown-item" href="#">Green Journals</a></li>
+                
+                  
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-info" type="submit">Search</button>
+             
+              
+              
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="container my-5">
+          
+            <h4>Contact Form</h4>
+            <div class="col">
+                <form method="POST">
+                  {%csrf_token %}
+                    <div class="mb-3">
+                        <label for="emri" class="form-label">Emri</label>
+                        <input type="text" class="form-control" id="emri" name="firstName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mbiemri" class="form-label">Mbiemri</label>
+                        <input type="text" class="form-control" id="mbiemri" name="lastName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="koment" class="form-label" ></label>
+                            <textarea  id="koment" class="form-control" name="koment"></textarea>
+                                </div>
+                                <input type="submit" class="btn btn-outline-primary" value="Sent">
+                                <div class="row">
+                                  <div class="col-12 col-md-6"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5992.99514177948!2d19.812104643431088!3d41.31979249300096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503102c27b29a1%3A0x83c76478ab685ee!2zQmxsb2t1LCBUaXJhbsOrLCBTaHFpcMOrcmlh!5e0!3m2!1ssq!2s!4v1734361255772!5m2!1ssq!2s" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                              </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    
+    
+    <!--nis navbar-->
+
+
+
+
+
+    <!--JS bootstrap-->
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--js-->
+    <script src="js/book.js"></script>
+</body>
+</html>
+{% endblock %}
+        
+
+      
+    

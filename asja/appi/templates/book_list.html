@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Books</h1>
+    <div class="book-container">
+        {% for book in books %}
+        <div class="book">
+            <img src="{{ book.book.image.url }}" alt="...">
+            <h3>{{ book.title }}</h3>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <p>{{ book.description }}</p>
+            <p><strong>Price:</strong>
+                <span class="original-price">{{ book.price }} ALL</span>
+                <span class="discounted-price">{{ book.discounted_price|floatformat:2 }} ALL</span>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

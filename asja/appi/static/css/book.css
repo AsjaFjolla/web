@@ -1,0 +1,391 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    line-height: 1.5;
+    font-family: italic;
+    font-size: 1em;
+}
+.navbar-brand img{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(218, 118, 183);
+    image-orientation: inherit;
+}
+.carousel-inner, .carousel-inner img{
+    height: 900px;
+    object-fit: none;
+    object-fit: cover;
+    
+}
+.dropdown-menu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.ps-2{
+    color: rgb(157, 125, 35);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2opx;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 17px;
+}
+.card img{
+    height: 100px;
+    width: 100px;
+}
+.container img{
+    width: 40%;
+    height: 50%;
+}
+.container{
+    background-color: white
+}
+.container-fluid img{
+    padding-top: 10%;
+}
+.container h1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+iframe{
+    width: 600px;
+    height: 450px;
+}
+/*Resposiviteti / Media Screen*/
+/* max,min,kombinim i max me min*/
+/*max*/
+
+@media svreen and (max-width:992px){} 
+
+@media screen and (max-width:600px){
+iframe{
+    width: 100%;
+}
+.navbar-brand img{
+    width: 50px;
+    height: 50px;
+    background-color: palevioletred;
+}
+}
+/*max-min*/
+@media svreen and (max-width:320px){} 
+@media svreen and (max-width:321px) and (min-width:574px){}
+@media svreen and (min-width:575px) and (max-width:992px){}
+@media svreen and (min-width:993px){}
+
+.col-md-6 iframe{
+    padding-top: 20%;
+    
+}
+.h3{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    text-align: center;
+    padding-bottom: 35px;
+    padding-top: 30px;
+    font-family: bold;
+
+}
+product-card {
+
+    position: relative;
+
+    border: none;
+
+    text-align: center;
+
+  }
+
+  .discount-badge {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    background-color:red;
+
+    color: white;
+
+    padding: 5px 10px;
+
+    font-size: 0.8rem;
+
+    border-radius: 3px;
+
+  }
+
+  .product-image {
+
+    height: 300px;
+
+    object-fit: cover;
+
+  }
+
+  .heart-icon, .cart-icon {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    right: 10px;
+
+    background-color: white;
+
+    border: none;
+
+    border-radius: 50%;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+  }
+
+  .heart-icon {
+
+    right: 55px;
+
+  }
+  .fw-bold{
+    padding-bottom: 10px;
+    
+  }
+  .container h2{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+  .thick-dash{
+    border-top: 90px dashed rgb(241, 189, 198);
+    margin: 20px 0;
+    background-color:palevioletred ;
+  }
+  footer {
+    background-color: #ddb5c2; /* Light background */
+    padding: 20px 0;
+    border-top: 2px solid #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+  }
+  
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    height: auto;
+    
+  }
+  
+  .footer-content {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .contact-us {
+    margin-bottom: 15px;
+  }
+  
+  .contact-us h3 {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    margin: 0 5px;
+  }
+  
+  .social-icons img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .subscribe {
+    margin-bottom: 15px;
+  }
+  
+  .subscribe h4 {
+    margin-bottom: 10px;
+  }
+  
+  .subscribe input {
+    width: 60%;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .subscribe button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscribe button:hover {
+    background-color: #0056b3;
+  }
+  
+  .footer-links {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .footer-links a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  .h4{
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+  }
+  
+  
+
+  /* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header */
+  .register-banner .top-banner{
+    background-color: #eac0ea;
+    text-align: center;
+    padding-bottom: 20px 0;
+    font-size: 14px;
+
+  
+  }
+  .register-banner p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    margin: 7px;
+    font-size: 20px;
+    padding-top: 7px;
+  }
+  
+  
+  .contact-header .logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .contact-header .logo {
+    height: 40px;
+  }
+  
+  .contact-header .nav-icons a {
+    margin-left: 15px;
+    font-size: 20px;
+    color: black;
+  }
+  
+  /* Page Title */
+  .page-title {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .page-title h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
+  
+  .page-title p {
+    font-size: 14px;
+    color: gray;
+  }
+  h6{
+    color: black;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    
+  }
+  main{
+    margin-top: 15px;
+    padding: 15px;
+  }
+  .fullpage{
+   background-color: rgb(231, 208, 231);
+    padding: 10px;
+    border-radius: 9px;
+    margin-top: 50px;
+   
+  }
+  .form{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  .classic h3{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    text-align: center;
+    padding-bottom: 35px;
+    padding-top: 30px;
+    font-family: bold;
+  }
+  .col-md-65{
+    padding-top: 20px;
+  }
+  .detail img{
+    width: 400px;
+    height: 550px;
+    padding-top: 15px;
+  }
+.detail h1{
+  margin-top: 6%;
+}
+.detail h2{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.book{
+  max-width: 600px;
+}
+.book p{
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+  
+

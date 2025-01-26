@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    
+
+  <header class="position-relative">
+        
+    <!--fund navbar-->
+    
+        <!--nis carosel-->
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'image/mainphoto.jpg'%}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'image/fjongo.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'image/jor.jpg' %}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      <!--fund carosel-->
+      <!-- Marrja e navarit -->
+      {% include 'navbar.html' %}
+  </header>
+        
+        <!--fund carosel-->
+        <!-- Marrja e navarit -->
+        
+    
+
+    <main>
+      <!--produkte,artikull,evente-->
+      <!--About-->
+      
+  
+      <main>
+        <!--produkte,artikull,evente-->
+        <!--About-->
+        
+    
+        <section class="container">
+          <h1>New Books & Journals</h1>
+          <div class="row">
+            {% for book in bookShelfs %}
+            <div class="col-12 col-md-6 col-lg-4 mb-5"> 
+              <div class="card h-100"> <!--h-100 per ti bere te gjtitha imazhet njesoj-->
+                <img src="{{book.book_image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{book.book_title}}</h5>
+                  <p class="card-text">{{book.book_price}} ALL</p>
+                  <p class="card-text">{{book.book_description}}</p>
+                  <a href="{% url 'detailpage' book.pk %}" class="btn btn-primary">Click for more</a>
+                </div>
+              </div>
+            </div>
+   {% endfor %}
+               
+                </div>
+      </section>
+   
+    <!--main-->
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-7 px-0 ">
+        <img src="{% static 'image/about.jpg' %}" alt="" class="img-fluid w-100"> <br>
+        </div>
+      <div class="col-12 col-md-5 d-flex justify-content-center align-items-center ">
+        <div>
+          <h1>About us</h1>
+      <p>Founded in 2024, our business was born from a passion for inspiring people to write, read, and express their creativity. Specializing in beautifully crafted handmade journals and carefully selected books, we believe in the power of storytelling and the magic of putting thoughts onto paper. Each journal is designed with care and detail, offering a unique space for dreams, ideas, and reflections. Whether you’re a writer, a reader, or simply someone who loves beautiful stationery, our mission is to provide you with tools that inspire and connect you to the joy of writing and reading.
+
+      </p>
+      
+        </div>
+      </div>
+      </div>
+      <section class="container">
+        <h2>Best Selling Books</h2>
+        <div class="row">
+          <!-- Librat me book_shelf me vleren True -->
+           <!-- Te marra nga ky instruksion bookShelfs = Book.objects.filter(book_shelf=True) -->
+          {% for book in bookShelfs %}
+          <div class="col-12 col-md-6 col-lg-4 mb-5"> 
+            <div class="card h-100"> <!--h-100 per ti bere te gjtitha imazhet njesoj-->
+              <img src="{{book.book_image.url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{book.book_title}}</h5>
+                <p class="card-text">{{book.book_price}} ALL</p>
+                  <p class="card-text">{{book.book_description}}</p>
+                  <a href="{% url 'detailpage' book.pk %}" class="btn btn-primary">Click for more</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          </div>
+    </section>
+        </main>
+  {% endblock %}
+
+  
+
+    
+
+
+
+
+
+   
+    
+
+
+
+
+
+
+
+
+
