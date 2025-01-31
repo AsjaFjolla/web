@@ -38,8 +38,8 @@
       </div>
         <nav class="navbar navbar-expand-lg position-absolute top-0 w-100">
             <div class="container-fluid">
-              <a class="navbar-brand" href=""><img src="image/lg.jpg" alt=""><br>
-                <span class="ps-2"> Fjolla's Shelf</span></a>
+              <a class="navbar-brand" href=""><img src="image/logo.jpg" alt=""><br>
+                <span class="ps-2">-Where stories live-</span></a>
     
                 
               
@@ -51,10 +51,10 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="register.html">Register</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'registerpage' %}">Register</a>
                     </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'contactpage' %}">Contact</a>
                   </li>
                 
                   <li class="nav-item dropdown">
@@ -79,10 +79,7 @@
     
                               <li><a class="dropdown-item" href="#">Journals</a></li>
     
-                              <li><a class="dropdown-item" href="#">Pink journals</a></li>
-                              <li><a class="dropdown-item" href="#">Blue journals</a></li>
-                              <li><a class="dropdown-item" href="#">Black Journals</a></li>
-                              <li><a class="dropdown-item" href="#">Green Journals</a></li>
+                              
                     
                       
                     </ul>
@@ -102,9 +99,14 @@
     
     <div class="detail">
         <h1>{{detailBook.book_title}}</h1>
-        <img src="{{detailBook.book_image.url}}" alt="">
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+        <img src="{{detailBook.book_image.url}}" alt="{{book.title}}" style="max-width: 400px; height: auto; border-radius: 8px; margin-bottom: 15px;">
         <div class="book">
         <p>{{detailBook.book_description}}</p>
+        
+
+        
+    </div>
     </div>
 
 

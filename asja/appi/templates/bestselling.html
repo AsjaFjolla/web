@@ -16,11 +16,11 @@
           <div class="card flex-fill">
             <img src="{{books.product_image.url}}" class="card-img-top" alt="...">
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">{{books.product_title}}</h5>
-              <p>{{books.product_description}}</p>
-                <p>{{books.product_price}}</p>
+              <h5 class="card-title">{{books.book_title}}</h5>
+              <p>{{books.book_description}}</p>
+                <p>{{books.book_price}}</p>
 
-              <a href="{% url 'detailspage' product.pk %}" class="ngjyra" class="btn mt-auto">POROSIT KËTU</a>
+              <a href="{% url 'detailspage' books.pk %}" class="ngjyra" class="btn mt-auto">POROSIT KËTU</a>
             </div>
           </div>
         </div>

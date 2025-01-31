@@ -57,16 +57,16 @@
     
         <section class="container">
           <h1>New Books & Journals</h1>
-          <div class="row">
-            {% for book in bookShelfs %}
-            <div class="col-12 col-md-6 col-lg-4 mb-5"> 
-              <div class="card h-100"> <!--h-100 per ti bere te gjtitha imazhet njesoj-->
-                <img src="{{book.book_image.url}}" class="card-img-top" alt="...">
+          <div class="row justify-content-center">
+            {% for item in items %}
+            <div class="col-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center"> 
+              <div class="card h-100 text-center"> <!--h-100 per ti bere te gjtitha imazhet njesoj-->
+                <img src="{{item.item_image.url}}" class="card-img-top d-block mx-auto" alt="..." >
                 <div class="card-body">
-                  <h5 class="card-title">{{book.book_title}}</h5>
-                  <p class="card-text">{{book.book_price}} ALL</p>
-                  <p class="card-text">{{book.book_description}}</p>
-                  <a href="{% url 'detailpage' book.pk %}" class="btn btn-primary">Click for more</a>
+                  <h5 class="card-title">{{item.item_title}}</h5>
+                  <p class="card-text">{{item.item_price}} ALL</p>
+                  <p class="card-text">{{item.item_description}}</p>
+                  <a href="{% url 'itempage' item.pk %}" class="btn btn-primary">Click for more</a>
                 </div>
               </div>
             </div>
@@ -97,13 +97,14 @@
           <!-- Librat me book_shelf me vleren True -->
            <!-- Te marra nga ky instruksion bookShelfs = Book.objects.filter(book_shelf=True) -->
           {% for book in bookShelfs %}
-          <div class="col-12 col-md-6 col-lg-4 mb-5"> 
+          <div class="col-12 col-md-6 col-lg-4 mb-5 d-flex justify-content-center"> 
             <div class="card h-100"> <!--h-100 per ti bere te gjtitha imazhet njesoj-->
-              <img src="{{book.book_image.url}}" class="card-img-top" alt="...">
+              <img src="{{book.book_image.url}}" class="card-img-top d-block mx-auto" alt="...">
               <div class="card-body">
                 <h5 class="card-title">{{book.book_title}}</h5>
                 <p class="card-text">{{book.book_price}} ALL</p>
                   <p class="card-text">{{book.book_description}}</p>
+                  
                   <a href="{% url 'detailpage' book.pk %}" class="btn btn-primary">Click for more</a>
               </div>
             </div>

@@ -8,8 +8,9 @@ def home(request):
     categories=Category.objects.all()
     # Ketu te dalin pjeset me t fundit
     bookShelfs = Book.objects.filter(book_shelf=True)
+    items = Item.objects.all()
     # Kete elementin e context "categories":categories duhet ta vendosesh tek te gjithe funksionet
-    context = {"books":books, "categories":categories, "bookShelfs":bookShelfs,}
+    context = {"books":books, "categories":categories, "bookShelfs":bookShelfs, "items": items,}
     return render(request,"home.html",context)
 
     
@@ -37,6 +38,7 @@ def detail(request,id):
     detailBook= Book.objects.get(pk = id)
     context={"detailBook":detailBook}
     return render(request,"detail.html",context)
+    
 def register(request):
     return render(request,"register.html")
 
@@ -45,4 +47,11 @@ def best(request, id):
     best=Book.objects.filter(book_shelf=True)
     context={"best": best}
     return render(request, 'bestselling.html',context)
+
+def item(request, id):
+    items=Item.objects.get(pk=id)
+    ndarja=Book.objects.filter(book_shelf=True)
+    context={"items": items,"ndarja": ndarja}
+    return render(request, 'item.html',context)
+
 

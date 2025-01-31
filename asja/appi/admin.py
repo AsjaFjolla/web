@@ -7,4 +7,8 @@ admin.site.register(Category)
 admin.site.register(Contact)
 admin.register(Book)
 admin.register(Bestselling)
+admin.site.register(Item)
+
+
+
 

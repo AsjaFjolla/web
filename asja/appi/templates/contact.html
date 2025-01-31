@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 {% extends 'index.html' %}
 {% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/book.css' %}">
+
+
+{% endblock %}
 {% block content %}
 <html lang="en">
 <head>
@@ -15,6 +21,7 @@
 <link href="https://fontawesome.com/icons/cart-shopping?fclassic&ssolid" rel="stylesheet">
 <body>
   <header class="position-relative">
+    <img src="{% static 'image/oldp.jpg' %}" class="w-100" style="max-height: 600px; object-fit: cover;" alt="...">
         
     <!--fund navbar-->
     
@@ -25,7 +32,7 @@
       
         <!-- Logo and Navigation -->
         <div class="logo-nav">
-          <img src="" alt="" class="logo" />
+          <img src="" alt=" class="logo/>
           <div class="nav-icons">
             </div>
         </div>
@@ -40,8 +47,8 @@
   </div>
     <nav class="navbar navbar-expand-lg position-absolute top-0 w-100">
         <div class="container-fluid">
-          <a class="navbar-brand" href=""><img src="image/lg.jpg" alt=""><br>
-            <span class="ps-2"> Fjolla's Shelf</span></a>
+          <a class="navbar-brand" href=""><img src="{% static 'image/logo.jpg' %}" alt=""><br>
+            <span class="ps-2">-Where stories live-</span></a>
 
             
           
@@ -81,10 +88,7 @@
 
                           <li><a class="dropdown-item" href="#">Journals</a></li>
 
-                          <li><a class="dropdown-item" href="#">Pink journals</a></li>
-                          <li><a class="dropdown-item" href="#">Blue journals</a></li>
-                          <li><a class="dropdown-item" href="#">Black Journals</a></li>
-                          <li><a class="dropdown-item" href="#">Green Journals</a></li>
+                          
                 
                   
                 </ul>
@@ -103,13 +107,17 @@
       </nav>
 
       <main>
+        
         <section class="container my-5">
+
           
             <h4>Contact Form</h4>
             <div class="col">
                 <form method="POST">
-                  {%csrf_token %}
+                  
+                  {% csrf_token %}
                     <div class="mb-3">
+                      
                         <label for="emri" class="form-label">Emri</label>
                         <input type="text" class="form-control" id="emri" name="firstName">
                     </div>

@@ -12,7 +12,7 @@ body{
 .navbar-brand img{
     width: 70px;
     height: 70px;
-    background-color: rgb(218, 118, 183);
+    
     image-orientation: inherit;
 }
 .carousel-inner, .carousel-inner img{
@@ -70,7 +70,7 @@ iframe{
 .navbar-brand img{
     width: 50px;
     height: 50px;
-    background-color: palevioletred;
+    
 }
 }
 /*max-min*/
@@ -173,7 +173,7 @@ product-card {
     padding-bottom: 35px;
   }
   .thick-dash{
-    border-top: 90px dashed rgb(241, 189, 198);
+    background-color:palevioletred ;
     margin: 20px 0;
     background-color:palevioletred ;
   }

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 {% extends 'index.html' %}
 {% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
 {% block content %}
-<html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +19,7 @@
 <link href="https://fontawesome.com/icons/cart-shopping?fclassic&ssolid" rel="stylesheet">
 <body>
     <header class="position-relative">
+      
       <!--Top-->
       <header class="register-banner">
 <div class="top-banner">
@@ -49,8 +54,8 @@
       </div>
         <nav class="navbar navbar-expand-lg position-absolute top-0 w-100">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index.html"><img src="{% static 'image/lg.jpg'%}" alt=""><br>
-                <span class="ps-2"> Fjolla's Shelf</span></a>
+              <a class="navbar-brand" href="index.html"><img src="{% static 'image/logo.jpg'%}" alt=""><br>
+                <span class="ps-2">-Where stories live-</span></a>
     
                 
               
@@ -59,19 +64,22 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% static 'home.html' %}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'homepage'%}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% static 'register.html' %}">Register</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'registerpage'%}">Register</a>
                     </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% static 'contact.html' %}">Contact</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'contactpage'%}">Contact</a>
                   </li>
                 
                   <li class="nav-item dropdown">
                     <a class=" nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
                       Category
                      </a>
+                     {% for category in categories %}
+              <li><a class="dropdown-item" href="{% url 'categorypage' category.pk %}">{{category.category_title}}</a></li>
+        {% endfor %}
                     <ul class="dropdown-menu">
                       
                     
@@ -90,10 +98,7 @@
     
                               <li><a class="dropdown-item" href="#">Journals</a></li>
     
-                              <li><a class="dropdown-item" href="#">Pink journals</a></li>
-                              <li><a class="dropdown-item" href="#">Blue journals</a></li>
-                              <li><a class="dropdown-item" href="#">Black Journals</a></li>
-                              <li><a class="dropdown-item" href="#">Green Journals</a></li>
+                              
                     
                       
                     </ul>
@@ -138,37 +143,7 @@
                               </main>
                             </div>
           <!--fundi-->
-<footer>
-  <div class="footer-content">
-    <!-- pjesa e fundit -->
-    <div class="contact-us">
-      <p>Follow us or get in touch:</p>
-      <div class="social-icons">
-        <a href="#" target="_blank"></a>
-        <i class="fa-brands fa-instagram">Instagram</i>
-        <a href="#" target="_blank"></a>
-        <i class="fa-brands fa-whatsapp">WhatsApp</i> 
-        <a href="https://wa.me/355693363906" target="_blank"></a>
-        <i class="fa-regular fa-envelope">Email</i>
-        
-      </div>
-    </div>
-   
-    <!-- Subscription Box -->
-    <div class="subscribe">
-      <h5>Subscribe</h5>
-      <input type="email" placeholder="Enter your email">
-      <button>Send</button>
-    </div>
-  
-    <!-- Links and Copyright -->
-    <div class="footer-links">
-      <a href="#">About</a> | <a href="#">Terms</a>
-      <p>copyright:<span id="year"></span></p>
-    </div>
-  </div>
-  </div>
-  </footer>
+
     
 </body>
 </html>
@@ -176,7 +151,7 @@
 
 
 
-
+{% endblock %}
 
 
 
