@@ -8,6 +8,8 @@ admin.site.register(Contact)
 admin.register(Book)
 admin.register(Bestselling)
 admin.site.register(Item)
+admin.site.register(Register)
+
 
 
 

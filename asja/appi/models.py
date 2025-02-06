@@ -17,11 +17,10 @@ class Bestselling(models.Model):
 
 class Item(models.Model):
     item_title = models.CharField(max_length=250,null=True, blank=True)
-    item_image = models.ImageField(upload_to="journal/", null=True, blank=True )
+    item_image = models.ImageField(upload_to="best/", null=True, blank=True )
     item_description=models.TextField(max_length=500,null=True,blank=True)
     item_price=models.DecimalField(max_digits=5,decimal_places=3,null=True,blank=True)
-    def __str__(self):
-        return f"{self.item_title}"
+   
     
 
 class Book(models.Model):
@@ -31,6 +30,7 @@ class Book(models.Model):
     book_price=models.DecimalField(max_digits=5,decimal_places=3,null=True,blank=True)
     book_category=models.ForeignKey(Category, null= True, blank=True, on_delete=models.CASCADE)
     book_shelf=models.BooleanField(null=True,blank=True)
+    book_jornual=models.BooleanField(null=True,blank=True)
     
 
     #book_quantity_int=models.IntegerField(null=True,blank=True) nr e plote jo per cmimet
@@ -51,5 +51,14 @@ class Contact(models.Model):
     
     
     def __str__(self):
-        return self.title
+        return f"{self.contact_name} {self.contact_surname}"
+    
+class Register(models.Model):
+    register_name=models.CharField(max_length=250,null=True,blank=True)
+    register_surname=models.CharField(max_length=250,null=True,blank=True)
+    register_email=models.EmailField(null=True,blank=True)
+    register_password=models.TextField(max_length=250,null=True,blank=True)
+
+    def __str__(self):
+        return f"{self.register_name} {self.register_surname}"
 
